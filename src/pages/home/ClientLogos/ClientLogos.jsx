@@ -22,8 +22,8 @@ const logos = [
 
 const ClientLogos = () => {
     return (
-        <section className="py-12">
-            <h2 className="text-2xl font-bold text-center text-[#03373D] mb-12">We've helped thousands of sales teams</h2>
+        <section className="pb-12 max-w-5xl mx-auto md:px-0 px-4">
+            <h2 className="text-lg sm:text-2xl font-bold text-center text-[#03373D] sm:mb-10 mb-6">We've helped thousands of sales teams</h2>
 
             <Swiper
                 modules={[Autoplay]}
@@ -31,9 +31,9 @@ const ClientLogos = () => {
                 speed={3000}
                 autoplay={{ delay: 0, disableOnInteraction: false }}
                 breakpoints={{
-                    240: { slidesPerView: 3, spaceBetween: 10 },
-                    768: { slidesPerView: 4, spaceBetween: 15 },
-                    1024: { slidesPerView: 6, spaceBetween: 10 },
+                    240: { slidesPerView: 3, spaceBetween: 20 },
+                    720: { slidesPerView: 4, spaceBetween: 15 },
+                    1024: { slidesPerView: 5 , spaceBetween: 10 },
                 }}
             >
                 {logos.map((logo, index) => (
@@ -41,7 +41,7 @@ const ClientLogos = () => {
                         <img
                             src={logo}
                             alt={`Company ${index + 1}`}
-                            className="h-5 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                            className="h-3 sm:h-5 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
                         />
                     </SwiperSlide>
                 ))}
