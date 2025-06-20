@@ -1,6 +1,6 @@
 import tracking from '../../../assets/benefits/tracking.png';
 import delivery from '../../../assets/benefits/delivery.png';
-import support from '../../../assets/benefits/support.png';
+import support from '../../../assets/tiny-deliveryman.png';
 
 const benefits = [
     {

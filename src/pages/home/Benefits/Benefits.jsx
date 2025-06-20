@@ -1,4 +1,3 @@
-// src/components/Benefits.jsx
 import React from "react";
 import benefits from "./benefitsData";
 
@@ -13,21 +12,22 @@ const Benefits = () => {
                         className="card sm:card-side items-center border border-gray-200  bg-[#f7f8f8]"
                     >
                         <figure className="p-6">
-                            <img src={item.image} alt={item.title} className="object-cover h-full w-full" />
+                            <img src={item.image} alt={item.title} className="object-cover max-h-[100px] w-full" />
                         </figure>
 
                         <div className="hidden sm:block border-r-2 border-dashed border-[#03373D] ml-4 mr-8 my-8"></div>
-                        <div className="sm:hidden w-[80%] border-b-2 border-dashed border-[#03373D]"></div> 
+                        <div className="sm:hidden w-[80%] border-b-2 border-dashed border-[#03373D]"></div>
 
                         <div className="card-body sm:w-2/3 p-6 flex justify-center">
-                        <div>
+                            <div>
                                 <h3 className="card-title font-bold md:text-2xl text:xl mb-1">{item.title}</h3>
                                 <p className="md:text-sm text-xs text-[#606060]">{item.description}</p>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
+            <div className="border-b-2 border-dashed border-[#03373D] pb-16"></div>
         </section>
     );
 };

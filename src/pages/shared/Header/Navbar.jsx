@@ -9,7 +9,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-[#FFFFFF]">
+        <div className="navbar bg-[#FFFFFF] my-4 rounded-2xl pl-6 pr-8">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end -mr-2">
-                <a className="btn">Button</a>
+                <button className="btn btn-primary text-black rounded-xl">Button</button>
             </div>
         </div>
     );
