@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { Link } from 'react-router';
 
 const AuthLogin = () => {
     const { register, handleSubmit, formState: {errors} } = useForm();
@@ -26,8 +28,14 @@ const AuthLogin = () => {
                 {/* errors */}
                 {errors?.password?.type === 'required' && <p className='text-xs text-red-500 font-medium leading-4 -mt-1'>Password must be required.</p> }
                 <button className="btn btn-primary text-black mt-2">Login</button>
+
+                {/* toggle link */}
+                <div><p className="text-xs leading-4 my-1">Don't have an account? <Link to='/auth-register' className='link link-hover text-green-700 font-medium'>Create one!</Link></p></div>
             </fieldset>
         </form>
+
+        {/* social login */}
+        <SocialLogin />
     </>
 };
 
