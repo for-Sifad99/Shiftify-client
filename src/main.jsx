@@ -1,6 +1,6 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';;
 import router from './routes/router';
 import { RouterProvider } from 'react-router';
 import AOSInitializer from './pages/shared/AOSInitializer/AOSInitializer';
