@@ -1,13 +1,46 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useAuth from '../../../hooks/useAuth/useAuth';
+import Swal from 'sweetalert2';
+
 
 const AuthRegister = () => {
+    const { createUser } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
+        const { email, password } = data;
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+
+                // Sweet Alert:
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 4000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Successfully account created!"
+                });
+
+                setTimeout(async () => {
+                    navigate(location?.pathname || '/');
+                }, 3000);
+            }).catch(error => {
+                console.log(error);
+            });
     };
 
     return <>
