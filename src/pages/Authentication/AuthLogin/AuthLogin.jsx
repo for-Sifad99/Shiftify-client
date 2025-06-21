@@ -2,12 +2,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const AuthLogin = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: {errors} } = useForm();
 
     const onSubmit = data => {
         console.log(data);
     };
-    
+
     return <>
         <form onSubmit={handleSubmit(onSubmit)} className="px-2">
             <h1 className="sm:text-4xl text-3xl font-extrabold mb-1">Welcome Back!</h1>
@@ -18,11 +18,14 @@ const AuthLogin = () => {
 
                 {/* password */}
                 <label className="label">Password</label>
-                <input type="password" className="input" {...register('password', { required: true, minLength: 6 })} placeholder="Password" />
+                <input type="password" className="input" {...register('password', { required: true})} placeholder="Password" />
 
                 {/* forgot password */}
                 <div><a className="link link-hover">Forgot password?</a></div>
-                <button className="btn btn-primary text-black mt-4">Login</button>
+
+                {/* errors */}
+                {errors?.password?.type === 'required' && <p className='text-xs text-red-500 font-medium leading-4 -mt-1'>Password must be required.</p> }
+                <button className="btn btn-primary text-black mt-2">Login</button>
             </fieldset>
         </form>
     </>

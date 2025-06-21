@@ -3,6 +3,7 @@ import Root from '../layouts/ShiftifyRoot';
 import AuthRoot from "../layouts/AuthRoot";
 import Home from '../pages/home/Home/Home';
 import AuthLogin from '../pages/Authentication/AuthLogin/AuthLogin';
+import AuthRegister from "../pages/Authentication/AuthRegister/AuthRegister";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         Component: AuthRoot,
         children: [
             { path: "/auth-login", Component: AuthLogin },
+            { path: "/auth-register", Component: AuthRegister },
         ],
     },
 ]);
