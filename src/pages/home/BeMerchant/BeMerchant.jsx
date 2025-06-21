@@ -3,7 +3,7 @@ import location from '../../../assets/location-merchant.png';
 
 const BeMerchant = () => {
     return (
-        <div className="bg-[url('assets/be-a-merchant-bg.png')] bg-no-repeat bg-secondary max-w-5xl lg:mx-auto md:px-10 md:py-16 sm:px-6 sm:py-10 p-4 rounded-4xl my-14 mx-4">
+        <div className="bg-[url('assets/be-a-merchant-bg.png')] bg-no-repeat bg-secondary max-w-5xl lg:mx-auto md:px-10 md:py-16 sm:px-6 sm:py-10 p-4 rounded-4xl lg:my-20 md:my-18 sm:my-16 my-10 sm:mx-6 mx-4">
             <div className="hero-content flex-col sm:flex-row-reverse">
                 <img
                     src={location}
@@ -14,10 +14,10 @@ const BeMerchant = () => {
                     <p className="pb-6 pt-4 md:text-xs sm:text-[10px] text-[8px] text-base-100">
                         We offer the lowest delivery charge with the highest value along with 100% safety of your product. Pathao courier delivers your parcels in every corner of Bangladesh right on time.
                     </p>
-                   <div className='flex flex-col md:flex-row items-start gap-2'>
+                    <div className='flex flex-col md:flex-row items-start gap-2'>
                         <button className="btn btn-primary lg:btn-md sm:btn-sm btn-xs text-black rounded-full">Become a Merchant</button>
                         <button className="btn btn-primary lg:btn-md sm:btn-sm btn-xs btn-outline hover:text-black rounded-full">Earn with Profast Courier</button>
-                   </div>
+                    </div>
                 </div>
             </div>
         </div>

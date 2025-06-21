@@ -6,6 +6,7 @@ import ClientLogos from '../ClientLogos/ClientLogos';
 import Benefits from '../Benefits/Benefits';
 import BeMerchant from '../BeMerchant/BeMerchant';
 import Testimonials from '../Testimonial/Testimonials';
+import FAQ from '../FAQ/FAQ.jsx';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Benefits />
             <BeMerchant />
             <Testimonials />
+            <FAQ />
         </div>
     );
 };

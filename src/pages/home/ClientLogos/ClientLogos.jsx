@@ -22,8 +22,8 @@ const logos = [
 
 const ClientLogos = () => {
     return (
-        <section className="pb-12 max-w-5xl mx-auto md:px-0 px-4">
-            <h2 className="text-lg sm:text-2xl font-bold text-center text-[#03373D] sm:mb-10 mb-6">We've helped thousands of sales teams</h2>
+        <section className="pt-6 pb-10 sm:pb-14 md:pt-8 md:pb-20 max-w-5xl mx-auto sm:px-6 px-4">
+            <h2 className="text-lg sm:text-2xl font-bold text-center text-secondary sm:mb-10 mb-6">We've helped thousands of sales teams</h2>
 
             <Swiper
                 modules={[Autoplay]}

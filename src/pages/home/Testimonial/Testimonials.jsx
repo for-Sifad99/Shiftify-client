@@ -40,7 +40,7 @@ const Testimonials = () => {
     }, [handleNext]);
 
     return (
-        <section className="py-20 relative">
+        <section className="py-6 relative">
             <div className="max-w-6xl mx-auto px-4 text-center">
                 <img src={customerImg} alt="" className="mx-auto h-16 mb-4" />
                 <h2 className="md:text-3xl sm:text-2xl text-xl sm:leading-10 leading-6 font-extrabold text-secondary">What our customers are saying</h2>
