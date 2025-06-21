@@ -7,6 +7,7 @@ const Benefits = () => {
             <div className="flex flex-col gap-6 text-secondary">
                 {benefits.map((item, index) => (
                     <div
+                        data-aos="flip-left"
                         key={index}
                         className="card sm:card-side items-center border border-gray-200  bg-[#f7f8f8]"
                     >

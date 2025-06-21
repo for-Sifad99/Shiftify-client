@@ -21,7 +21,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a href='/' className='font-bold'>
+                <a href='/'>
                     <ShiftifyLogo />
                 </a>
             </div>

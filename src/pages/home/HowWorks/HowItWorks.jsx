@@ -11,6 +11,7 @@ const HowItWorks = () => {
                     {works.map((item, index) => (
                         <div
                             key={index}
+                            data-aos="fade-right"
                             className="bg-white hover:bg-primary transition duration-300 shadow-md rounded-lg p-6 flex flex-col items-baseline justify-start"
                         >
                             <item.icon className="text-4xl text-secondary mb-3" />
